@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OKSystem Advanced</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>OKSystem</h1>
+
+<input id="searchBar" type="text" placeholder="Search alters..." oninput="searchAlters()">
+
+<button onclick="toggleTheme()">Dark / Light</button>
+
+<div class="importBox">
+<input id="pkSystemId" placeholder="PluralKit System ID">
+<button onclick="importFromPluralKit()">Import</button>
+</div>
+
+<button onclick="exportBackup()">Export Backup</button>
+<input type="file" onchange="importBackup(event)">
+
+</header>
+
+<section>
+<h2>Current Front</h2>
+<div id="frontContainer"></div>
+</section>
+
+<section>
+<h2>Front History</h2>
+<ul id="historyContainer"></ul>
+</section>
+
+<section>
+<h2>System Members</h2>
+<div id="alterContainer"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
